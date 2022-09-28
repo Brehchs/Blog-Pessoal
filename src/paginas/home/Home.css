@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
+.titulo {
+    font-family: 'Kavoon', cursive;
+    font-size: 50px;
+    text-decoration: overline underline;
+    color : #862722;
+    text-align: center;
+}
+.img {
+    width: 100%;
+    height: 100%;
+    display: block; /*Deixar em Bloco*/
+    margin: 0 auto; /*centralizou a imagem*/
+}
