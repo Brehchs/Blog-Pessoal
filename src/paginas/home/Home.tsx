@@ -6,7 +6,7 @@ import "./Home.css";
 function Home() {
     return(
         <> 
-          <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#F1F0F5" }}> 
+          <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#F1F0F5"}}> 
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "#7299BE", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
@@ -15,7 +15,7 @@ function Home() {
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
                         </Box>
-                        <Button variant="outlined" style={{ borderColor: "#75C5DD", backgroundColor: "#F1F0F5", color: "#7299BE" }}>Ver Postagens</Button>
+                        <Button variant="outlined" style={{ borderColor: "#75C5DD", backgroundColor: "#F1F0F5", color: "white" }}>Ver Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
