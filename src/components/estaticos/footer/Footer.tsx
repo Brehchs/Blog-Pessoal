@@ -4,6 +4,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import {Typography, Grid} from "@material-ui/core";
 import { Box } from "@mui/material";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -15,7 +16,7 @@ function Footer() {
         alignItems="center"
       >
         <Grid alignItems="center" item xs={12}>
-          <Box style={{ backgroundColor: "#7299BE", height: "120px" }}>
+          <Box className="box1">
             <Box
               paddingTop={1}
               display="flex"
@@ -26,7 +27,7 @@ function Footer() {
                 variant="h5"
                 align="center"
                 gutterBottom
-                style={{ color: "white" }}
+                className="textos"
               >
                 Siga-me os bons!!{" "}
               </Typography>
@@ -36,23 +37,23 @@ function Footer() {
                 href="https://www.instagram.com/brehchs/"
                 target="_blank"
               >
-                <InstagramIcon style={{ fontSize: 60, color: "#75C5DD" }} />
+                <InstagramIcon className="redes" />
               </a>
               <a
                 href="https://www.linkedin.com/in/brenda-chagas-667aa3233/"
                 target="_blank"
               >
-                <LinkedInIcon style={{ fontSize: 60, color: "#75C5DD" }} />
+                <LinkedInIcon className="redes" />
               </a>
             </Box>
           </Box>
-          <Box style={{ backgroundColor: "#7299BE", height: "60px" }}>
+          <Box className="box2">
             <Box paddingTop={1}>
               <Typography
                 variant="subtitle2"
                 align="center"
                 gutterBottom
-                style={{ color: "white"}}
+                className="textos"
               >
                 © 2022 Copyright:
               </Typography>
@@ -62,7 +63,7 @@ function Footer() {
                 variant="subtitle2"
                 align="center"
                 gutterBottom
-                style={{ color: "white" }}
+                className="textos"
               >
                 Brenda Chagas
               </Typography>
