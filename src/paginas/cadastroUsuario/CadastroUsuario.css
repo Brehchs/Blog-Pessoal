@@ -1,12 +1,4 @@
-.textoslogin {
-    font-weight: bold;
-    color: #F42B00;
-    text-decoration: none !important;
-
-    
-}
-
-.imagem {
+.imagem2 {
     background-image: url(/src/assets/img/login.jpg);
     background-repeat: no-repeat;
     width: 100vh;
@@ -15,16 +7,22 @@
     background-position: center;
 }
 
-.text-decorator-none {
+.textosCadastro{
+    font-weight: bold;
+    color: #F42B00;
+   
+}
+
+.botaoCancela {
+    margin-right: 20px !important;
     text-decoration: none;
-    
+    border-color: black !important;
+    background-color:#F42B00 !important;
+    color:white!important;
+    font-weight: bold !important;
 }
 
-.corPagina{
-background-color:#F0F0F0;
-}
-
-.botaologin {
+.botaocadastro {
     border-color: black !important;
     background-color:#FFBCBB !important;
     color:black!important;

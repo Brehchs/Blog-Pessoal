@@ -1,12 +1,4 @@
-.cursor {
-    cursor:pointer;
-    color: white;
-}
-
-.text-decorator-none {
-    text-decoration: none;
-}
-
-.fundo {
-    color: #FFBCBB;
-}
+.stile {
+    height: 100vh;
+ 
+ }

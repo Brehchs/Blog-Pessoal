@@ -3,7 +3,7 @@
 }
 
 .imagemFundo {
-    background-image: url(https://i.pinimg.com/originals/ea/0c/ac/ea0cacd1760020fe90cb4f6525f786e2.jpg);
+    background-image: url(/src/assets/img/home.jpg);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
