@@ -1,4 +1,8 @@
-.stile {
-    height: 100vh;
- 
- }
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
