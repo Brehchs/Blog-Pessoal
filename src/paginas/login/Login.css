@@ -1,5 +1,5 @@
 .textoslogin {
-    font-weight: bold;
+    font-weight: bold !important;
     color: #F42B00;
     text-decoration: none !important;
 
@@ -29,4 +29,10 @@ background-color:#F0F0F0;
     background-color:#FFBCBB !important;
     color:black!important;
     font-weight: bold !important;
+}
+
+.cadastrar {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color:  #F42B00 !important;
 }

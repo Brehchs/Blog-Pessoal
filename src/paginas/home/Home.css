@@ -1,9 +1,9 @@
 .caixa {
-    background-color: #EFD4CD;
+    background-color: #ffffff;
 }
 
 .imagemFundo {
-    background-image: url(/src/assets/img/home.jpg);
+    background-image: url(/src/assets/img/home2.jpg);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -27,7 +27,7 @@
 }
 
 .postagens {
-    background-color: #F42B00 !important;
+    background-color: #F0F0F0!important;
     
 
 }

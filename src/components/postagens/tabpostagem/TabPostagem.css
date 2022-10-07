@@ -6,3 +6,20 @@
  background-color:#FFBCBB !important;
  color:black!important;
 }
+
+.bar {
+    background-color: #FFB9BB !important;
+}
+
+.post {
+   color:#FF6692 !important;
+   font-size: 15px !important;
+   font-weight: bold !important;
+}
+
+.sobre {
+    color: #F42B00 !important;
+    font-size: 15px !important;
+   font-weight: bold !important;
+ 
+}
