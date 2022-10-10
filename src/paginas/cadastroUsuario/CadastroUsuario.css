@@ -8,8 +8,8 @@
 }
 
 .textosCadastro{
-    font-weight: bold;
-    color: #F42B00;
+    font-weight: bold !important;
+    color: #F42B00 !important;
    
 }
 
