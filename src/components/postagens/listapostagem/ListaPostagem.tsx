@@ -41,7 +41,8 @@ function ListaPostagem() {
     <>
       {
         posts.map(post => (
-          <Box m={2} >
+         <div className='fundo'>
+         <Box m={2}>
             <Card variant="outlined" className="card">
               <CardContent>
                 <Typography className="nomecard" color="textSecondary" gutterBottom>
@@ -78,6 +79,7 @@ function ListaPostagem() {
               </CardActions>
             </Card>
           </Box>
+          </div>
         ))
       }
     </>

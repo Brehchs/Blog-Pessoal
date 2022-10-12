@@ -109,13 +109,14 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
       <>
         <Container>
           <form onSubmit={onSubmit}>
-            <Typography
+            <Typography 
               variant="h3"
-              color="textSecondary"
+              color="#D25B06"
               component="h1"
               align="center"
+              fontFamily="Inconsolata"
             >
-              Formulário de cadastro postagem
+              Nova Postagem
             </Typography>
   
             <TextField
