@@ -1,9 +1,10 @@
 .caixa {
-    background-color: #ffffff;
+    background-blend-mode: luminosity;
+    background-color: #E8E8E8;
 }
 
 .imagemFundo {
-    background-image: url(/src/assets/img/home2.jpg);
+    background-image: url(/src/assets/img/home5.jpeg);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -13,21 +14,40 @@
 }
 
 .titulo {
-    color: #F42B00 !important;
-    font-weight: bold !important;
+    color: #D25B06 !important;
+    text-decoration: none !important;
+    font-family: 'Inconsolata', monospace !important;
+   
 }
 
-.subtitulo {
-    color: black;
-}
 .botao {
-    border-color: #F42B00 !important;
-    background-color:#FFBCBB !important;
+    border-color: black!important;
+    background-color:#E8E8E8 !important;
     color:black!important;
+    font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
+
 }
 
 .postagens {
-    background-color: #F0F0F0!important;
+    background-color: #E8E8E8!important;
     
 
+}
+
+.decorationNone {
+    text-decoration: none;
+}
+
+.subtitle {
+    color: black !important;
+    font-size: 18px !important;
+    margin-bottom: 50px !important;
+    font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
+
+}
+.bemvindo {
+    padding: 10px !important;
+   
 }

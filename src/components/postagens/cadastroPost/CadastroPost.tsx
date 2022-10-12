@@ -1,11 +1,12 @@
 
 import { Container, Typography, TextField, FormControl, InputLabel, Select, MenuItem, FormHelperText, Button } from '@mui/material';
 import React, { ChangeEvent, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import Tema from '../../../models/Tema';
   import { busca, buscaId, post, put } from '../../../services/Service';
+import { TokenState } from '../../../store/tokens/tokensReducer';
   
   function CadastroPost() {
     let navigate = useNavigate();
@@ -14,7 +15,9 @@ import Tema from '../../../models/Tema';
   
     const [temas, setTemas] = useState<Tema[]>([]);
   
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
   
     const [tema, setTema] = useState<Tema>({
       id: 0,
@@ -78,7 +81,7 @@ import Tema from '../../../models/Tema';
   
       if (id !== undefined) {
         try {
-          await put(`/postagem`, postagem, setPostagens, {
+          await put(`/postagens`, postagem, setPostagens, {
             headers: {
               Authorization: token,
             },
@@ -89,7 +92,7 @@ import Tema from '../../../models/Tema';
         }
       } else {
         try {
-          await post(`/postagem`, postagem, setPostagens, {
+          await post(`/postagens`, postagem, setPostagens, {
             headers: {
               Authorization: token,
             },
@@ -99,7 +102,7 @@ import Tema from '../../../models/Tema';
           alert('Erro ao cadastrar, verifique os campos');
         }
       }
-      navigate('/postagem');
+      navigate('/posts');
     }
   
     return (

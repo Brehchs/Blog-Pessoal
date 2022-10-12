@@ -1,13 +1,13 @@
 .textoslogin {
-    font-weight: bold !important;
-    color: #F42B00 !important;
+    color: #D25B06 !important;
     text-decoration: none !important;
+    font-family: 'Inconsolata', monospace !important;
 
     
 }
 
 .imagem {
-    background-image: url(/src/assets/img/login.jpg);
+    background-image: url(/src/assets/img/login2.png);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -21,18 +21,31 @@
 }
 
 .corPagina{
-background-color:#F0F0F0;
+background-color: #1BFEA4;
 }
 
 .botaologin {
-    border-color: black !important;
-    background-color:#FFBCBB !important;
+    background-color:#D25B06 !important;
     color:black!important;
     font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
 }
 
 .cadastrar {
     font-size: 18px !important;
     font-weight: bold !important;
-    color:  #F42B00 !important;
+    color:  #D25B06 !important;
+    font-family: 'Inconsolata' !important;
+}
+
+.padding {
+    background-blend-mode: luminosity;
+    background-color: #1BFEA4;
+    
+}
+
+.texto {
+    font-size: 18px !important;
+    color:  black !important;
+    font-family: 'Inconsolata' !important;
 }

@@ -11,36 +11,42 @@ import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
 import ListaTema from './components/temas/listatema/ListaTema';
+import { CacheProvider } from '@emotion/react';
+import store from './store/store';
+import {Provider} from "react-redux";
 
 function App() {
   return (
-    <BrowserRouter>
+   <Provider store={store}>
+     <BrowserRouter>
       
-        <Navbar />
+      <Navbar />
 
-        <div style={{minHeight: '80vh'}}>
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/cadastro" element={<CadastroUsuario />} />
+      <div style={{minHeight: '80vh'}}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
 
-            <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home />} />
 
-            <Route path="/temas" element={<ListaTema />} />
-            <Route path="/cadastroTema" element={<CadastroTema />} />
+          <Route path="/temas" element={<ListaTema />} />
+            <Route path="/formularioTema" element={<CadastroTema />} />
             <Route path="/atualizarTema/:id" element={<CadastroTema />} />
             <Route path="/apagarTema/:id" element={<DeletarTema />} />
-
-            <Route path="/posts" element={<ListaPostagem />} />
-            <Route path="/editarPost/:id" element={<CadastroPost />} />
-            <Route path="/apagarPost/:id" element={<DeletarPostagem />} />
-          </Routes>
-        </div>
-        
-        <Footer />
+          
+          <Route path="/posts" element={<ListaPostagem />} />
+          <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
+          <Route path="/apagarPost/:id" element={<DeletarPostagem />} />
+        </Routes>
+      </div>
       
-    </BrowserRouter>
-  );
+      <Footer />
+    
+  </BrowserRouter>
+  </Provider>
+);
+
 }
 
 export default App;

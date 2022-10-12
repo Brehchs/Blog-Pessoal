@@ -1,6 +1,6 @@
 import React , {useState, useEffect, ChangeEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import User from '../../models/User';
+import Usuario from '../../models/Usuario';
 import { cadastroUsuario } from '../../services/Service';
 import { Grid, Box, Typography, Button, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -10,7 +10,7 @@ function CadastroUsuario() {
 
     let navigate = useNavigate();
     const [confirmarSenha,setConfirmarSenha] = useState<String>("")
-    const [user, setUser] = useState<User>(
+    const [user, setUser] = useState<Usuario>(
         {
             id: 0,
             nome: '',
@@ -18,7 +18,7 @@ function CadastroUsuario() {
             senha: ''
         })
 
-    const [userResult, setUserResult] = useState<User>(
+    const [userResult, setUserResult] = useState<Usuario>(
         {
             id: 0,
             nome: '',
@@ -56,11 +56,11 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid container direction='row' justifyContent='center' alignItems='center' className="fundocadastro">
             <Grid item xs={6} className='imagem2'></Grid>
             <Grid item xs={6} alignItems='center'>
-                <Box paddingX={10}>
-                    <form onSubmit={onSubmit}>
+                <Box paddingX={10} className="sombra" >
+                    <form  onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom  component='h3' align='center' className='textosCadastro'>Cadastrar</Typography>
                         <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='usuario' label='Usuario' variant='outlined' name='usuario' margin='normal'fullWidth />

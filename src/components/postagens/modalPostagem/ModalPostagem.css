@@ -3,6 +3,11 @@
   }
   
   .btnModal{
-    border-color: white !important;
-    background-color: white !important;
+    border-color: #D25B06!important;
+    background-color: #E8E8E8 !important;
+    color: #D25B06 !important;
+    font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
+
+
   }

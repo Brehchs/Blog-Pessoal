@@ -3,5 +3,45 @@
 }
 
 .fundo {
-background-color:white;
+background-color:#E8E8E8;
+}
+
+.card {
+    background-color: white ;
+    border-radius: 50px !important;
+}
+
+.nomecard {
+     font-family: 'Inconsolata'!important;
+     font-size: 20px !important;
+}
+
+.titulocard {
+    font-family: 'Inconsolata', monospace !important;
+    text-shadow: bold !important;
+    font-size: 25px !important;
+}
+
+.textocard {
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+}
+
+.temacard {
+    font-family: 'Inconsolata'!important;
+    font-size: 10px !important;
+}
+
+.btatual {
+    background-color: #ECBA95 !important;
+    color: black !important;
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+}
+
+.btdelet {
+    background-color: #1BFEA4 !important;
+    color: black !important;
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
 }

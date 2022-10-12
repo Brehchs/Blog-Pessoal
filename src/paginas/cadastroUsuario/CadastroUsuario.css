@@ -1,5 +1,5 @@
 .imagem2 {
-    background-image: url(/src/assets/img/login.jpg);
+    background-image: url(/src/assets/img/login2.png);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -8,23 +8,31 @@
 }
 
 .textosCadastro{
-    font-weight: bold !important;
-    color: #F42B00 !important;
+    color: #D25B06 !important;
+    text-decoration: none !important;
+    font-family: 'Inconsolata', monospace !important;
    
 }
 
 .botaoCancela {
     margin-right: 20px !important;
-    text-decoration: none;
-    border-color: black !important;
-    background-color:#F42B00 !important;
-    color:white!important;
+    background-color:#E0E0E0 !important;
+    color:#D25B06 !important;
     font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
 }
 
 .botaocadastro {
-    border-color: black !important;
-    background-color:#FFBCBB !important;
+    background-color:#D25B06 !important;
     color:black!important;
     font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
+}
+.fundocadastro {
+    background-color: #1BFEA4;
+}
+
+.sombra {
+    background-blend-mode: luminosity;
+    background-color: #1BFEA4;
 }
