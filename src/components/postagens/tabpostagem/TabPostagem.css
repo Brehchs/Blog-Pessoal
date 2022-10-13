@@ -36,5 +36,24 @@
 
 .textosobre {
    font-family: 'Inconsolata'!important;
-  
+   display: flex;
+   justify-content: flex-end;
+   text-align: justify !important;
+
+}
+
+.imagemSobre {
+   background-image: url(/src/assets/img/sobre.jpeg);
+   background-repeat: no-repeat;
+   width: 100px;
+   height: 200px;
+   background-size: cover;
+   background-position: center;
+   margin-bottom: 50px !important;
+   margin-right: 50px !important;
+}
+
+.itens{
+   display: flex;
+   align-items: center;
 }

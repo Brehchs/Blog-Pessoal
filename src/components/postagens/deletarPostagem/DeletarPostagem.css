@@ -1,0 +1,42 @@
+.fundoDelete {
+    background-color: #E8E8E8 ;
+    padding: 200px !important;
+}
+
+
+.cardDelete {
+    border-radius: 50px !important;
+    background-color: white !important;
+    
+}
+
+.tituloDelete {
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    color: black;
+    font-weight: bold !important;
+    
+}
+
+.textDelete{
+    color: #D35B06!important;
+    font-size: 25px !important;
+    
+}
+
+.botaoSim {
+    background-color: #1BFEA4 !important;
+    color: black!important;
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+
+}
+
+.botaoNao{
+    background-color: white !important;
+    color: #D35B06 !important;
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+
+}

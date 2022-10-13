@@ -6,6 +6,7 @@ import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostage
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function Home() {
   let navigate = useNavigate();
@@ -15,9 +16,20 @@ function Home() {
  
 
   useEffect(() => {
-    if (token == "") {
-      alert("Você precisa estar logado");
-      navigate("/login");
+    if (token === "") {
+    
+      toast.error ('Você Precisa Estar Logado!', { //definições do alerta
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+      
+      navigate("/login")
     }
   }, [token]);
   return (
@@ -72,5 +84,6 @@ function Home() {
     </>
   );
 }
+
 
 export default Home;

@@ -14,10 +14,13 @@ import ListaTema from './components/temas/listatema/ListaTema';
 import { CacheProvider } from '@emotion/react';
 import store from './store/store';
 import {Provider} from "react-redux";
+import {ToastContainer} from 'react-toastify'; // permite notificações personalizadas e visualment bonitas. 
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
    <Provider store={store}>
+    <ToastContainer />
      <BrowserRouter>
       
       <Navbar />
@@ -33,11 +36,11 @@ function App() {
           <Route path="/temas" element={<ListaTema />} />
             <Route path="/formularioTema" element={<CadastroTema />} />
             <Route path="/atualizarTema/:id" element={<CadastroTema />} />
-            <Route path="/apagarTema/:id" element={<DeletarTema />} />
+            <Route path="/deletarTema/:id" element={<DeletarTema />} />
           
           <Route path="/posts" element={<ListaPostagem />} />
           <Route path="/formularioPostagem/:id" element={<CadastroPost />} />
-          <Route path="/apagarPost/:id" element={<DeletarPostagem />} />
+          <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
         </Routes>
       </div>
       

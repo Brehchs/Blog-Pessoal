@@ -3,9 +3,10 @@ import { Container, Typography, TextField, FormControl, InputLabel, Select, Menu
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Postagem from '../../../models/Postagem';
 import Tema from '../../../models/Tema';
-  import { busca, buscaId, post, put } from '../../../services/Service';
+import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
   
   function CadastroPost() {
@@ -33,7 +34,17 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
   
     useEffect(() => {
       if (token === '') {
-        alert('Você precisa estar Logado!');
+        toast.error ('Você Precisa Estar Logado!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+
         navigate('/login');
       }
     }, [token]);
@@ -86,7 +97,17 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
               Authorization: token,
             },
           });
-          alert('Postagem atualizada com sucesso');
+          toast.success ('Postagem Atualizado Com Sucesso!', { //definições do alerta
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+          });
+
         } catch (error) {
           alert('Erro ao atualizar, verifique os campos');
         }
@@ -97,7 +118,17 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
               Authorization: token,
             },
           });
-          alert('Postagem cadastrada com sucesso');
+          toast.success ('Postagem Cadastrada Com Sucesso - É ISSO AÍ :) !', { //definições do alerta
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+          });
+
         } catch (error) {
           alert('Erro ao cadastrar, verifique os campos');
         }
@@ -123,7 +154,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
               value={postagem.titulo}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagens(e)}
               id="titulo"
-              label="titulo"
+              label="Titulo"
               variant="outlined"
               name="titulo"
               margin="normal"
@@ -134,7 +165,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
               value={postagem.texto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagens(e)}
               id="texto"
-              label="texto"
+              label="Texto"
               name="texto"
               variant="outlined"
               margin="normal"
@@ -162,8 +193,8 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
                 ))}
               </Select>
               <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-              <Button type="submit" variant="contained" color="primary">
-                Finalizar
+              <Button type="submit" variant="contained"  color="success">
+                Postar
               </Button>
             </FormControl>
           </form>

@@ -3,6 +3,7 @@ import { Box } from '@mui/system';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -23,7 +24,17 @@ function CadastroTema() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado!');
+      toast.error ('Você Precisa Estar Logado!', { //definições do alerta
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
+
       navigate('/login');
     }
   }, [token]);
@@ -55,7 +66,16 @@ function CadastroTema() {
         await put('/temas', tema, setTema, {
           headers: {'Authorization': token}
         })
-        alert('Tema atualizado com sucesso')
+        toast.success ('Tema Atualizado Com Sucesso!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
         navigate('/temas')
       } catch (error) {
         alert('Falha ao atualizar o tema, reveja o nome, por favor')
@@ -65,7 +85,17 @@ function CadastroTema() {
         await post('/temas', tema, setTema, {
           headers: {'Authorization': token}
         })
-        alert('Tema cadastrado com sucesso')
+        toast.success ('Tema Cadastrado Com Sucesso!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+
         navigate('/temas')
       } catch (error) {
         alert('Falha ao criar o novo tema, por favor, verifique o nome.')
@@ -79,12 +109,12 @@ function CadastroTema() {
     <>
       <Container maxWidth="sm">
         <form onSubmit={cadastrar}>
-          <Typography variant="h3" component="h1">
-            Novo tema
+          <Typography display="flex" justifyContent="space-around" color="#D25B06"  fontFamily="Inconsolata" variant="h3" component="h1" marginTop="150px" >
+            Novo Tema
           </Typography>
 
           <TextField
-            label="Nome do tema"
+            label="Nome do Tema"
             value={tema.descricao}
             onChange={(event: ChangeEvent<HTMLInputElement>) =>
               updatedModel(event)
@@ -96,7 +126,7 @@ function CadastroTema() {
             fullWidth
           />
 
-          <Box display="flex" justifyContent="space-around">
+          <Box display="flex" justifyContent="space-around"  marginTop="20px">
             <Link to="/home">
               <Button variant="contained" color="secondary">
                 Cancelar

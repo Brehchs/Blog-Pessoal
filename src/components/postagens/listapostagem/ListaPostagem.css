@@ -21,28 +21,32 @@ padding: 20px !important;
     font-family: 'Inconsolata', monospace !important;
     text-shadow: bold !important;
     font-size: 25px !important;
+    color: #D35B06!important;
+    font-weight: bold !important;
 }
 
 .textocard {
     font-family: 'Inconsolata'!important;
-    font-size: 15px !important;
+    font-size: 20px !important;
 }
 
 .temacard {
     font-family: 'Inconsolata'!important;
-    font-size: 10px !important;
+    font-size: 15px !important;
 }
 
 .btatual {
-    background-color: #ECBA95 !important;
-    color: black !important;
+    background-color: #1BFEA4 !important;
+    color: black!important;
     font-family: 'Inconsolata'!important;
     font-size: 15px !important;
+    
 }
 
 .btdelet {
-    background-color: #1BFEA4 !important;
-    color: black !important;
+    background-color: white !important;
+    color: #D35B06 !important;
     font-family: 'Inconsolata'!important;
     font-size: 15px !important;
+    font-weight: bold !important;
 }

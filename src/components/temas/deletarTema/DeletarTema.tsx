@@ -2,6 +2,7 @@ import {Box, Button, Card, CardActions, CardContent, Container, Typography} from
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Tema from '../../../models/Tema';
 import { buscaId, deleteId } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -16,7 +17,17 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
   
     useEffect(() => {
       if (token === '') {
-        alert("Você precisa estar logado!");
+        toast.error ('Você Precisa Estar Logado!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+
         navigate('/login');
       }
     }, [token]);
@@ -44,7 +55,16 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
         await deleteId(`/temas/${id}`, {
           headers: { Authorization: token },
         })
-        alert('Tema apagado com sucesso.')
+        toast.success ('Tema Deletado Com Sucesso!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
         navigate('/temas')
       } catch (error) {
         alert('Erro ao deletar o tema')
@@ -53,7 +73,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
     }
   
     return (
-      <Container>
+      <Container> 
         <Box m={2}>
           <Card variant="outlined">
             <CardContent>
@@ -92,7 +112,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
             </CardActions>
           </Card>
         </Box>
-      </Container>
+        </Container>
     );
   }
   

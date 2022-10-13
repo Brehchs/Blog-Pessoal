@@ -7,6 +7,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function DeletarPostagem() {
     let navigate = useNavigate();
@@ -18,7 +19,17 @@ function DeletarPostagem() {
   
     useEffect(() => {
       if (token === '') {
-        alert("Você precisa estar logado!");
+        toast.error ('Você Precisa Estar Logado!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+
         navigate('/login');
       }
     }, [token]);
@@ -45,25 +56,35 @@ function DeletarPostagem() {
         await deleteId(`/postagens/${id}`, { //rota do api, back-end
           headers: { Authorization: token },
         })
-        alert('Postagem deletada com sucesso.')
+        toast.success ('Postagem Deletada Com Sucesso!', { //definições do alerta
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+
         navigate('/posts')
       } catch (error) {
-        alert('Erro ao deletar a postagem')
+        alert('Erro Ao Deletar A Postagem')
         navigate('/posts')
       }
     }
-  
    
   return (
     <>
+      <div className="fundoDelete">
       <Box m={2}>
-        <Card variant="outlined" >
-          <CardContent>
+        <Card variant="outlined" className="cardDelete" >
+          <CardContent >
             <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar a Postagem:
+              <Typography className="tituloDelete" color="textSecondary" gutterBottom>
+                TEM CERTEZA QUE QUER DELETAR A POSTAGEM:
               </Typography>
-              <Typography color="textSecondary" >
+              <Typography className="textDelete" color="textSecondary" >
                 {post?.titulo}
               </Typography>
             </Box>
@@ -72,12 +93,12 @@ function DeletarPostagem() {
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-              <Button  variant="contained" className="marginLeft" size='large' color="primary">
+              <Button onClick={sim}  variant="contained" className="marginLeft botaoSim" size='large' color="primary">
                 Sim
               </Button>
               </Box>
               <Box>
-              <Button   variant="contained" size='large' color="secondary">
+              <Button onClick={nao} className="botaoNao"   variant="contained" size='large' color="secondary">
                 Não
               </Button>
               </Box>
@@ -85,6 +106,7 @@ function DeletarPostagem() {
           </CardActions>
         </Card>
       </Box>
+      </div>
     </>
   );
 }
