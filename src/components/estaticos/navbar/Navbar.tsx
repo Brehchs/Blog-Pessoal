@@ -34,9 +34,9 @@ var navbarComponent;
 
 if(token != "") {
   navbarComponent =  <AppBar position="static">
-  <Toolbar className="cor" variant="dense">
+  <Toolbar className="corBar" variant="dense">
     <Box className="cursor">
-      <Typography className="cor" variant="h5" color="inherit">
+      <Typography className="corBar" variant="h5" color="inherit">
         Blog
       </Typography>
     </Box>

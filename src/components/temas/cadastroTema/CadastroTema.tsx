@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import "./CadastroTema.css"; 
 
 function CadastroTema() {
   let navigate = useNavigate();
@@ -107,9 +108,10 @@ function CadastroTema() {
 
   return (
     <>
-      <Container maxWidth="sm">
+      <div className="cadTema">
+      <Container maxWidth="sm" className="fundoNewTema">
         <form onSubmit={cadastrar}>
-          <Typography display="flex" justifyContent="space-around" color="#D25B06"  fontFamily="Inconsolata" variant="h3" component="h1" marginTop="150px" >
+          <Typography className="tituloNewTema" display="flex" justifyContent="space-around" variant="h3" component="h1" marginTop="150px" >
             Novo Tema
           </Typography>
 
@@ -128,7 +130,7 @@ function CadastroTema() {
 
           <Box display="flex" justifyContent="space-around"  marginTop="20px">
             <Link to="/home">
-              <Button variant="contained" color="secondary">
+              <Button className="cancelaTema" variant="contained" color="secondary">
                 Cancelar
               </Button>
             </Link>
@@ -138,6 +140,7 @@ function CadastroTema() {
           </Box>
         </form>
       </Container>
+      </div>
     </>
   );
 }

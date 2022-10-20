@@ -8,6 +8,7 @@ import Postagem from '../../../models/Postagem';
 import Tema from '../../../models/Tema';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import "./CadastroPost.css"; 
   
   function CadastroPost() {
     let navigate = useNavigate();
@@ -138,14 +139,14 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
   
     return (
       <>
-        <Container>
+        <Container className="fundoNewPost" >
           <form onSubmit={onSubmit}>
-            <Typography 
+            <Typography className="tituloNewPost"
               variant="h3"
               color="#D25B06"
               component="h1"
               align="center"
-              fontFamily="Inconsolata"
+              
             >
               Nova Postagem
             </Typography>
@@ -192,8 +193,8 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
                   <MenuItem value={item.id} style={{display: 'block'}}>{item.descricao}</MenuItem>
                 ))}
               </Select>
-              <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-              <Button type="submit" variant="contained"  color="success">
+              <FormHelperText className="textNewPost">Escolha um tema para a postagem</FormHelperText>
+              <Button className="btNewPost " type="submit" variant="contained"  color="success">
                 Postar
               </Button>
             </FormControl>

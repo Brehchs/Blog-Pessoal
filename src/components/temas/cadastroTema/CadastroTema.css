@@ -2,3 +2,28 @@
     margin-top: 20px;
     
 }
+
+.tituloNewTema {
+    color: #D25B06 !important;
+    text-decoration: none !important;
+    font-family: 'Inconsolata', monospace !important;
+   
+}
+
+.fundoNewTema {
+    background-color: white;
+    border-radius: 50px;
+   margin-top: 20px;
+}
+.cadTema{
+    background-color: #E8E8E8 ;
+    padding: 80px;
+}
+
+.cancelaTema {
+    background-color: #1BFEA4 !important;
+    color: black!important;
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+    
+}

@@ -4,17 +4,23 @@
 
 .fundo {
 background-color:#E8E8E8;
-padding: 20px !important;
+display: flex;
+justify-content: flex-end;
 }
 
 .card {
     background-color: white ;
     border-radius: 50px !important;
+    padding: .5px;
+    
+    
 }
 
 .nomecard {
      font-family: 'Inconsolata'!important;
      font-size: 20px !important;
+     justify-content: center;
+     display: flex;
 }
 
 .titulocard {
@@ -23,30 +29,51 @@ padding: 20px !important;
     font-size: 25px !important;
     color: #D35B06!important;
     font-weight: bold !important;
+    justify-content: center;
+    display: flex;
 }
 
 .textocard {
     font-family: 'Inconsolata'!important;
     font-size: 20px !important;
+    justify-content: center;
+    display: flex;
 }
 
 .temacard {
     font-family: 'Inconsolata'!important;
     font-size: 15px !important;
+    justify-content: center;
+    display: flex;
 }
 
 .btatual {
-    background-color: #1BFEA4 !important;
-    color: black!important;
+    background-color:#E8E8E8 !important;
+    color:#D25B06!important;
+    font-weight: bold !important;
     font-family: 'Inconsolata'!important;
-    font-size: 15px !important;
     
+
 }
 
 .btdelet {
-    background-color: white !important;
-    color: #D35B06 !important;
-    font-family: 'Inconsolata'!important;
-    font-size: 15px !important;
+    background-color:#E8E8E8 !important;
+    color:black!important;
     font-weight: bold !important;
+    font-family: 'Inconsolata'!important;
+
+}
+.img {
+    background-image: url(/src/assets/img/páginas.jpeg);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.center {
+    justify-content: center;
+    display: flex; 
 }

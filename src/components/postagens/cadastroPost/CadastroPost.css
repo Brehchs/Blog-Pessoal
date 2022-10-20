@@ -2,3 +2,33 @@
     margin-top: 20px;
 }
 
+.btNewPost {
+    background-color: #D35B06 !important;
+    color: black!important;
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+    font-weight: bold !important;
+    margin-top: 20px !important;
+
+}
+
+.fundoNewPost {
+    background-color: #1BFEA4 !important;
+    padding: 30px !important;
+}
+
+.textNewPost {
+    font-family: 'Inconsolata'!important;
+    font-size: 15px !important;
+    font-weight: bold !important; 
+    margin-top: 20px !important;
+    color: black;
+}
+
+.tituloNewPost {
+    font-family: 'Inconsolata', monospace !important;
+    text-shadow: bold !important;
+    font-size: 40px !important;
+    color: #D35B06!important;
+    
+}
